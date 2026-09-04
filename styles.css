@@ -1,0 +1,157 @@
+:root {
+  --ink: #24292f;
+  --muted: #656d76;
+  --line: #d8dee4;
+  --link: #0969da;
+  --background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: min(900px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 48px 0 36px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 38px;
+}
+
+.portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 38px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.45rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 24px 0 10px;
+  font-size: 1.08rem;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.interest-list {
+  margin-top: -4px;
+}
+
+.links {
+  margin-top: 14px;
+}
+
+.links a {
+  margin-right: 10px;
+}
+
+.news-list time {
+  display: inline-block;
+  min-width: 72px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.publication {
+  margin-bottom: 18px;
+}
+
+.publication p {
+  margin-bottom: 4px;
+}
+
+.venue {
+  color: var(--muted);
+}
+
+.title {
+  font-weight: 700;
+}
+
+.entry {
+  margin-bottom: 16px;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 44px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 28px, 900px);
+    padding-top: 28px;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .portrait {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
